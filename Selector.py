@@ -9,6 +9,8 @@ def Selector():
     ext = os.path.splitext(path)
     if ext[1] == '.theme':
         return path
+    elif not path:
+        return
     else:
         path = Selector()
         return path
